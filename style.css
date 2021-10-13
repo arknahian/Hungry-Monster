@@ -1,0 +1,118 @@
+/* Global */
+body{
+    font-family: 'Heebo', sans-serif;
+}
+
+/* nav bar  */
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+nav img{
+    width: 97.97px;
+}
+a#logo{
+    flex-grow: 0.7;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* search bar  */
+input[type="search"]{
+    border: none;
+    background-color: rgba(211, 211, 211, 0.356);
+    outline: none;
+    padding: 40px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.input{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+#search-bar{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+input[type="search"]::placeholder{
+    font-size: 18px;
+}
+input[type="search"]::after{
+    content: "Click Me";
+}
+#search-btn{
+    background-color: #F06C4E;
+    padding: 28px;
+    margin-left: -30px;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+/* food card container */
+main{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+#food-card-container{
+    width: 96%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+}
+.food-card {
+    background-color: #F8F7F5;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.food-card img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* pop up  */
+#popup{
+    width: 25vw;
+    background-color: white;
+    height: 72vh;
+    position: fixed;
+    /* display: flex; */
+    display: none;
+    align-items: left;
+    margin-left: 700px;
+    margin-top: -192px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px lightgrey;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+#popup img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+li::marker{
+    color: orangered;
+    content: "☑ "
+}
+#popup-img{
+    height: 50%;
+}
