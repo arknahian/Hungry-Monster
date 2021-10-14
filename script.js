@@ -4,7 +4,8 @@ searchBtn.addEventListener("click", () => {
     getData(userInput)
     .then(res => {
         console.log(res)
-        console.log(res.meals)
+        console.log(res.meals[0].strIngredient1)
+        
 
         const meals = res.meals;
         meals.forEach(item => {
@@ -49,12 +50,13 @@ searchBtn.addEventListener("click", () => {
         })
     })
     .catch(err => {
-        alert("fuck you")
+        alert(`Sorry Can't find `)
     })
 })
 
 const getData = async (input) => {
-    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${input.value}`);
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${input.value}`)
+    // const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input.value}`);
     if (!res.ok) {
         const message = `Error ${res.status}`
         throw new Error(message);
@@ -62,4 +64,12 @@ const getData = async (input) => {
     const data = await res.json();
     return data;
 }
+
+
+
+
+
+
+
+
 
